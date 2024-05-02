@@ -3,7 +3,117 @@ html{
 }
 
 body{
-    background-color: #282828;
+    background-color: #642929;
     font-family: "poppins", sans-serif;
     margin: 0 auto;
+    max-width: 1120px;
+}
+
+.cabecalho {
+    background-color: mediumblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.cabecalho .logo{
+    background-color: yellowgreen;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    text-decoration: underline;
+    font-family: "Raileway", sans-serif;
+
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo{
+    color: #9443d8;
+    border: 2px solid #9443d8;
+}
+
+.cabecalho .menu ul{
+    background-color: rgb(29, 53, 45);
+}
+
+.cabecalho .menu li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover{
+    background-color: #9443d8;
+    padding: 10px 20px;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.home{
+    background-color: green;
+    display: flex;
+    min-width: calc(100vh - 125px);
+    align-items: center;
+    gap: 50px;
+}
+
+.home .informacoes{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p{
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais{
+    background-color: coral;
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i{
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover{
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto{
+    background-color: red;
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img{
+    width: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #0011ff, rgba(206, 195, 43, 0.726) ,#3aeb43ee);
 }
