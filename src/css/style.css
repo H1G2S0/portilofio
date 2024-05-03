@@ -107,7 +107,6 @@ body{
 }
 
 .home .container-foto .foto{
-    background-color: red;
     max-width: 450px;
     border-radius: 50%;
 }
@@ -115,5 +114,61 @@ body{
 .home .container-foto img{
     width: 100%;
     border-radius: 50%;
+}
+
+.home .foto.sombra-interna{
     background: linear-gradient(to bottom right, #0011ff, rgba(206, 195, 43, 0.726) ,#3aeb43ee);
+}
+
+.projetos{
+    background-color: purple;
+    padding: 70px 0;
+}
+
+.projetos .titulo{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos{
+    background-color: yellow;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto{
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color: black;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto{
+    background-color: #040203;
+    position: absolute;
+    top: 0;
 }
