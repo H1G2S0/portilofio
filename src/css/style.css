@@ -1,16 +1,17 @@
 html{
     color: #ffffff;
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #642929;
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size: 120% 120%;
     font-family: "poppins", sans-serif;
     margin: 0 auto;
     max-width: 1120px;
 }
 
 .cabecalho {
-    background-color: mediumblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +19,6 @@ body{
 }
 
 .cabecalho .logo{
-    background-color: yellowgreen;
     width: 65px;
     height: 65px;
     text-align: center;
@@ -36,10 +36,6 @@ body{
     border: 2px solid #9443d8;
 }
 
-.cabecalho .menu ul{
-    background-color: rgb(29, 53, 45);
-}
-
 .cabecalho .menu li a{
     font-size: 20px;
     text-transform: capitalize;
@@ -54,7 +50,6 @@ body{
 }
 
 .home{
-    background-color: green;
     display: flex;
     min-width: calc(100vh - 125px);
     align-items: center;
@@ -62,7 +57,6 @@ body{
 }
 
 .home .informacoes{
-    background-color: black;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -84,7 +78,6 @@ body{
 }
 
 .home .redes-sociais{
-    background-color: coral;
     display: flex;
     gap: 20px;
 }
@@ -117,11 +110,12 @@ body{
 }
 
 .home .foto.sombra-interna{
-    background: linear-gradient(to bottom right, #0011ff, rgba(206, 195, 43, 0.726) ,#3aeb43ee);
+    background: linear-gradient(to bottom right, #101baf, rgba(14, 59, 97, 0.726) ,#134620ee);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
 }
 
 .projetos{
-    background-color: purple;
     padding: 70px 0;
 }
 
@@ -134,7 +128,6 @@ body{
 }
 
 .projetos .container-projetos{
-    background-color: yellow;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -158,7 +151,7 @@ body{
 }
 
 .projetos .projeto h3{
-    background-color: black;
+    background-color: #040203;
     width: 100%;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -171,4 +164,54 @@ body{
     background-color: #040203;
     position: absolute;
     top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.7;
+    background-color: #040203;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    color: #ffffff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+
+}
+
+@keyframes gradient-animation{
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
