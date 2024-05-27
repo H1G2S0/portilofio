@@ -109,11 +109,11 @@ body{
     border-radius: 50%;
 }
 
-.home .foto.sombra-interna{
+/* .home .foto.sombra-interna{
     background: linear-gradient(to bottom right, #070c50 ,#134620ee);
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
-}
+} */
 
 .projetos{
     padding: 70px 0;
@@ -199,6 +199,31 @@ body{
 }
 
 .projetos .btn-mostrar-projetos.remover{
+    display: none;
+}
+
+.projetos .btn-esconder-projetos{
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    color: #ffffff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.projetos .btn-esconder-projetos{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-esconder-projetos.remove{
     display: none;
 }
 

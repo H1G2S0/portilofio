@@ -1,18 +1,44 @@
 
-const btnMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
-const projeotsAtivos = document.querySelectorAll('.projeto:not(.ativo)');
+const btnMostrarMais = document.querySelector('.btn-mostrar-projetos');
+const btnMostrarMenos = document.querySelector('.btn-esconder-projetos');
+const projetosAtivos = document.querySelectorAll('.projeto:not(.ativo)');
 
-    btnMostrarProjetos.addEventListener('click', () => {
-        mostarMaisProjetos();
-        esconderBtnMaisProjetos();
-    });
+    btnMostrarMais.addEventListener('click', () => {
+       mostrarMaisProjetos();
+       esconderBotaoMaisProjetos();
+       mostrarBotaoMenosProjetos();
+})
 
-function esconderBtnMaisProjetos() {
-    btnMostrarProjetos.classList.add('remover');
+btnMostrarMenos.addEventListener('click', () => {    
+    esconderMaisProjetos();
+    
+})
+
+
+
+
+
+function mostrarBotaoMaisProjetos() {
+    btnMostrarMais.classList.add('ativo');
+    // btnMostrarMais.classList.remove('remove');
 }
 
-    function mostarMaisProjetos() {
-        projeotsAtivos.forEach(projetoInativo => {
-            projetoInativo.addEventListener('ativo');
-        });
-    }
+function esconderMaisProjetos() {
+    projetosAtivos.forEach(projetoAtivo => {
+        projetoAtivo.classList.remove('ativo');
+    });
+}
+
+function mostrarBotaoMenosProjetos() {
+    btnMostrarMenos.classList.remove('remove');
+}
+
+function esconderBotaoMaisProjetos() {
+    btnMostrarMais.classList.add('remover');
+}
+
+function mostrarMaisProjetos() {
+    projetosAtivos.forEach(projetoInativo => {
+        projetoInativo.classList.add('ativo');
+    });
+}
