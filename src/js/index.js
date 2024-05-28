@@ -4,19 +4,32 @@ const btnMostrarMenos = document.querySelector('.btn-esconder-projetos');
 const projetosAtivos = document.querySelectorAll('.projeto:not(.ativo)');
 
     btnMostrarMais.addEventListener('click', () => {
+        avisoGay();
+    })
+
+
+
+    btnMostrarMais.addEventListener('click', () => {
        mostrarMaisProjetos();
        esconderBotaoMaisProjetos();
        mostrarBotaoMenosProjetos();
 })
 
-btnMostrarMenos.addEventListener('click', () => {    
+    btnMostrarMenos.addEventListener('click', () => {    
     esconderMaisProjetos();
-    
+    esconderBotaoMostrarMenos();
+    mostrarBotaoMostrarMais();
 })
 
 
 
+function mostrarBotaoMostrarMais() {
+    btnMostrarMais.classList.remove('remover');
+}
 
+function esconderBotaoMostrarMenos() {
+    btnMostrarMenos.classList.add('remover');
+}
 
 function mostrarBotaoMaisProjetos() {
     btnMostrarMais.classList.add('ativo');
@@ -30,7 +43,7 @@ function esconderMaisProjetos() {
 }
 
 function mostrarBotaoMenosProjetos() {
-    btnMostrarMenos.classList.remove('remove');
+    btnMostrarMenos.classList.remove('remover');
 }
 
 function esconderBotaoMaisProjetos() {

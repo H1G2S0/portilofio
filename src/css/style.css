@@ -4,7 +4,10 @@ html{
 }
 
 body{
-    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-color: #0a1817;
+}
+
+main{
     background-size: 120% 120%;
     font-family: "poppins", sans-serif;
     margin: 0 auto;
@@ -12,10 +15,14 @@ body{
 }
 
 .cabecalho {
+    background-image: url(../images/helloWorld.gif);
+    background-position: center;
+    background-size: cover;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px;
+    padding: 90px 15px;
 }
 
 .cabecalho .logo{
@@ -32,20 +39,24 @@ body{
 }
 
 .cabecalho a:hover .logo{
-    color: #9443d8;
-    border: 2px solid #9443d8;
+    color: #538e1e;
+    border: 2px solid #3c8490;
 }
 
 .cabecalho .menu li a{
     font-size: 20px;
     text-transform: capitalize;
     transition: 0.2s;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .cabecalho .menu li a:hover{
-    background-color: #9443d8;
+    /* background-color: #76d9e7; */
     padding: 10px 20px;
-    color: #ffffff;
+    color: #538e1e;
+    border: 2px solid #3c8490;
     border-radius: 50px;
 }
 
@@ -54,6 +65,8 @@ body{
     min-width: calc(100vh - 125px);
     align-items: center;
     gap: 50px;
+    margin-top: 30px;
+    padding: 20px;
 }
 
 .home .informacoes{
@@ -177,6 +190,7 @@ body{
     background-color: #040203;
 }
 
+
 .projetos .btn-mostrar-projetos{
     background: none;
     border: 1px solid #ffffff;
@@ -193,8 +207,8 @@ body{
     cursor: pointer;
 }
 
-.projetos .btn-mostrar-projetos{
-    background-color: #9443d8;
+.projetos .btn-mostrar-projetos:hover{
+    background-color: #538e1e;
     transition: 0.3s;
 }
 
@@ -218,12 +232,12 @@ body{
     cursor: pointer; 
 }
 
-.projetos .btn-esconder-projetos{
-    background-color: #9443d8;
+.projetos .btn-esconder-projetos:hover{
+    background: #538e1e;
     transition: 0.3s;
 }
 
-.projetos .btn-esconder-projetos.remove{
+.projetos .btn-esconder-projetos.remover{
     display: none;
 }
 
@@ -239,4 +253,15 @@ body{
     100% {
         background-position: 0% 50%;
     }
+}
+
+.copyright{
+    background-color: #263138;
+    color: white;
+    text-align: center;
+    padding: 34px;
+}
+
+.copyright a{
+    color: #ff9a6c;
 }
