@@ -55,4 +55,6 @@
     .projetos {
         padding: 30px;
     }
+    .projetos .projeto {
+        max-width: 240px;
 }
