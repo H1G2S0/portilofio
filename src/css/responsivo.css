@@ -23,6 +23,26 @@
 }
 
 @media(max-width: 425px) {
+    .cabecalho .logo{
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        /* border-radius: 2px solid #ffffff;
+        text-decoration: underline;
+        text-align: center; */
+        line-height: 26px;
+        
+    }
+
+    .cabecalho .menu li a{
+        display: none;
+    }
+
+    .cabecalho .menu .miniProjetos {
+        display: block;
+        font-size: 10px;
+    }
+
     .home .informacoes h1 {
         font-size: 30px;
     }

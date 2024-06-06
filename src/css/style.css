@@ -50,10 +50,14 @@ body {
 }
 
 .cabecalho .menu li a:hover {
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: #538e1e;
     border: 2px solid #3c8490;
     border-radius: 50px;
+}
+
+.cabecalho .menu .miniProjetos {
+  display: none;
 }
 
 .home {
