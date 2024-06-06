@@ -1,57 +1,51 @@
+const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 
 const btnMostrarMais = document.querySelector('.btn-mostrar-projetos');
 const btnMostrarMenos = document.querySelector('.btn-esconder-projetos');
-const projetosAtivos = document.querySelectorAll('.projeto:not(.ativo)');
-
-    btnMostrarMais.addEventListener('click', () => {
-        avisoGay();
-    })
 
 
+btnMostrarMais.addEventListener('click', () => {
+    
+    esconderBtnMostrarMais();
+    mostrarMaisProjetos();
+    mostrarBtnMostrarMenos();
 
-    btnMostrarMais.addEventListener('click', () => {
-       mostrarMaisProjetos();
-       esconderBotaoMaisProjetos();
-       mostrarBotaoMenosProjetos();
 })
 
-    btnMostrarMenos.addEventListener('click', () => {    
+btnMostrarMenos.addEventListener('click', () => {
     esconderMaisProjetos();
-    esconderBotaoMostrarMenos();
-    mostrarBotaoMostrarMais();
+    esconderBtnMostrarMenos();
+    mostrarBtnMostrarMais();
 })
 
 
 
-function mostrarBotaoMostrarMais() {
+
+
+function mostrarBtnMostrarMais() {
     btnMostrarMais.classList.remove('remover');
 }
 
-function esconderBotaoMostrarMenos() {
+function esconderBtnMostrarMenos() {
     btnMostrarMenos.classList.add('remover');
 }
 
-function mostrarBotaoMaisProjetos() {
-    btnMostrarMais.classList.add('ativo');
-    // btnMostrarMais.classList.remove('remove');
-}
-
 function esconderMaisProjetos() {
-    projetosAtivos.forEach(projetoAtivo => {
-        projetoAtivo.classList.remove('ativo');
+    projetosInativos.forEach(projetosInativo => {
+        projetosInativo.classList.remove('ativo');
     });
 }
 
-function mostrarBotaoMenosProjetos() {
+function mostrarBtnMostrarMenos() {
     btnMostrarMenos.classList.remove('remover');
 }
 
-function esconderBotaoMaisProjetos() {
-    btnMostrarMais.classList.add('remover');
+function mostrarMaisProjetos() {
+    projetosInativos.forEach(projetosInativo => {
+        projetosInativo.classList.add('ativo');
+    });
 }
 
-function mostrarMaisProjetos() {
-    projetosAtivos.forEach(projetoInativo => {
-        projetoInativo.classList.add('ativo');
-    });
+function esconderBtnMostrarMais() {
+    btnMostrarMais.classList.add('remover');
 }
